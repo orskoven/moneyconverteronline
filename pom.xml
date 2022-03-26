@@ -53,4 +53,22 @@
         </plugins>
     </build>
 
+    <plugin>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>azure-functions-maven-plugin</artifactId>
+        <configuration>
+            <resourceGroup>${functionResourceGroup}</resourceGroup>
+            <appName>${functionAppName}</appName>
+        </configuration>
+        <executions>
+            <execution>
+                <id>package-functions</id>
+                <goals>
+                    <goal>package</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+
+
 </project>
